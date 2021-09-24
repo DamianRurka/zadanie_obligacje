@@ -1,1 +1,26 @@
 #Zadanie domowe obligacje
+Styczen = 1.5928244844
+Luty = -0.4535091012
+Marzec = 2.3246717171
+Kwiecien = 1.2612544072
+Maj = 1.7825262857
+Czerwiec = 2.3293845415
+Lipiec = 1.5022298422
+Siepien = 1.7825262857
+Wrzesien = 2.3288489941
+Pazdziernik = 0.6169213482
+Listopad = 2.3522958864
+Grudzien = 0.3377795452
+Styczen_2 = 1.5770352473
+Luty_2 = -0.2927814426
+Marzec_2 = 2.4861965902
+Kwiecien_2 = 0.2671103178
+Maj_2 = 1.4179526723
+Czerwiec_2 = 1.0542432673
+Lipiec_2 = 1.4805201045
+Sierpien_2 = 1.5770352473
+Wrzesien_2 = -0.0774206903
+Pazdziernik_2 = 1.1657333987
+Listopad_2 = -0.4041867176
+Grudzien_2 = 1.4997085208
+#zmienne , inflacja poszczególnych miesięcy
