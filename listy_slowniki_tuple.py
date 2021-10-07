@@ -184,6 +184,8 @@
 # # set:3 list: 4
 
 
-sample_dict = "a": 1, "b": 2, "c"
-for k, v in sample_dict.items():
-  print("{}: {}".format(k, v)
+# sample_dict = "a": 1, "b": 2, "c"
+# for k, v in sample_dict.items():
+#   print("{}: {}".format(k, v)                  TODO:tu też coś nie działa
+
+#

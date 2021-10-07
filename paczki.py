@@ -50,7 +50,7 @@ if numer_najlzejszej_paczki == 0:
 
 print("liczba paczek wysłąnych to :{}.\nliczba wysłanych kilogramów : {}.\n"
       "Suma pustych kilogramów :{}.\nNumer najlzejszej paczki: {}.jest tam {}.pustych kilogramów "
-      "".format(numer_paczki, liczba_wyslanych_przesylek, puste_kilogramy,
+      "".format(numer_paczki, liczba_wysłanych_kilogramów, puste_kilogramy,
                 numer_najlzejszej_paczki, puste_kilogramy_najlzejsza))
 
 
