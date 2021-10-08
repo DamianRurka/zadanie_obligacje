@@ -12,4 +12,7 @@ sprzedaz
 raspberry
 25000
 5
+saldo
+100
+dofinansowanie
 stop

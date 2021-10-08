@@ -119,11 +119,11 @@
 
 # Metoda .index, jak i operatory "in", "not in" również są dostępne.
 
-# mixed_tuple = "a", 1, "b", 2, True
-# print(mixed_tuple.index("b"))
-# print("a" in mixed_tuple)#wynikiem tego "printa" będzie true bo a jest w liście
-# # ( jeśli chcemy wydrukować "a" to musimy podać numer elementu w liście czyli 0
-# print(mixed_tuple [0])
+mixed_tuple = "a", 1, "b", 2, True
+print(mixed_tuple.index("b"))
+print("a" in mixed_tuple)#wynikiem tego "printa" będzie true bo a jest w liście
+# ( jeśli chcemy wydrukować "a" to musimy podać numer elementu w liście czyli 0
+print(mixed_tuple [0])
 
 # Tuple mogą być przekształcane w listy, a listy w tuple.
  # TODO: zmiana tupla na liste i na odwrót
