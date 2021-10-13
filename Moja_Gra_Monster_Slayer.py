@@ -182,7 +182,7 @@ if bitwy == 20:
             print("ODCIALES REKE GOBLINA \nTWA SZANSA NA ZWYCIESTWO ROSNIE!")
             print(GOBLIN[1])
             input('atak \n"enter" ')
-            print('twa broń pochłania:', lifestell, 'hp \nCzyżbyś miał szansę wygrać?')
+            print('twa broń pochłania:', lifestell)
             hp = hp + lifestell
             HP -= 10
             hp -= 4
