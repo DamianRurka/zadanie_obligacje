@@ -48,6 +48,7 @@ while bitwy != 20:
         if wytrzymalosc_zbroi == 0:
             obrazenia += 4
             del ekwipunek[1]
+            sleep(3)
             print('\n\nTwoja zbroja ulegla zniszczeniu')
             print('Otrzymywane obrazenia wrastają 2-krotnie')
         if hp <= 0:
@@ -91,6 +92,7 @@ while bitwy != 20:
     print("\n\t\t\tstoczone bitwy :", bitwy)
     print("\n\t\t\tpokonane stwory:", zabite_trole)
     if bitwy == 10:
+        sleep(3)
         print('\nDotarłeś do ołtarza : \nW zamian za twą krew twoja siła wzrośnie ')
         x = input('\nWpisz "krew" aby poświecić 50pkt swojego życia')
         if x == 'krew':
@@ -102,14 +104,14 @@ if bitwy == 20:
     krwiopijca = random.randint(1, 10)
 
     ekwipunek += item4
+    sleep(3)
     print('przebrnąłeś przez całą jaskinię')
-    sleep(2)
+    sleep(3)
     print('\n\n\t\t....')
-    sleep(2)
+    sleep(3)
     print('\n\n\t\t\tO NIE ! ')
     sleep(3)
     print('\t\t\t\nNiestety czeka cie ostateczna walka z : "GOBLIN LORD" ')
-    input("")
     HP = 1000
     GOBLIN_LORD_HP = ["GOBLIN LORD", HP]
     GOBLIN = (
