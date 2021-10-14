@@ -70,7 +70,3 @@ for komenda in historia:
         print(historia[od:do])
 
 
-for komenda in historia:
-    for x in komenda:
-        print(x)
-
