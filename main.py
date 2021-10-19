@@ -24,6 +24,7 @@ class Wychowawca:
     def __init__(self):
         self.name = None
         self.klasy = []
+        self.uczniowie_wychowawcy = []
 
     def wczytaj(self):
         self.name = input()
@@ -33,6 +34,12 @@ class Wychowawca:
             if not klasa:
                 break
             self.klasy.append(klasa)
+    def uczniowie(self):
+        imie = input()
+        klasa_ucznia = input()
+        if klasa_ucznia in self.klasy:
+            self.uczniowie_wychowawcy.append(imie)
+        print("uczniowie ktorych uczy:", self.uczniowie_wychowawcy)
 
     def wypisz(self):
         print("wychowawca {}, {}".format(self.name, self.klasy))
@@ -97,11 +104,37 @@ while True:
         print("złe dane")
         break
 
-# akcja = sys.argv[1]
-#
-# if len(akcja) > 2:
-#     for osoba in wychowawcy + nauczyciele + uczniowie:
-#         if osoba.name == akcja:
-#             osoba.wypisz()
+akcja = sys.argv[1]
 
-print(klasy)
+if len(akcja) > 2:
+    for osoba in wychowawcy:
+        if akcja == osoba.name:
+            osoba.wypisz()
+            for uczen in uczniowie:
+                if uczen.klasa in osoba.klasy:
+                    uczen.wypisz()
+    for osoba in nauczyciele:
+        if akcja == osoba.name:
+            osoba.wypisz()
+            for wychowawca in wychowawcy:
+                klasy_wspolne = (set(wychowawca.klasy) & set(osoba.klasy))
+                if klasy_wspolne:
+                    wychowawca.wypisz()
+    for uczen in uczniowie:
+        if akcja == uczen.name:
+            uczen.wypisz()
+            for nauczyciel in nauczyciele:
+                if uczen.klasa in nauczyciel.klasy:
+                    nauczyciel.wypisz()
+
+else:
+    for wychowawca in wychowawcy:
+        if akcja in wychowawca.klasy:
+            wychowawca.wypisz()
+    for uczen in uczniowie:
+        if akcja == uczen.klasa:
+            uczen.wypisz()
+
+
+#print(klasy)
+
