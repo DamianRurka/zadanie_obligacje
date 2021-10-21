@@ -85,49 +85,49 @@
 #
 # print_hello(input(), input())
 
-
-pracownicy = [
-    {
-        'imie': 'damian',
-        'zespol': 'Backend',
-        'pensja podstawowa': '16000'
-     },
-    {
-        'imie': 'staszek',
-        'zespol': 'devOps',
-        'pensja podstawowa': '20000',
-        'uptime': 0.99
-     },
-    {
-        'imie': 'lukasz',
-        'zespol': 'sprzedaz',
-        'pensja podstawowa': '8000',
-        'podpisane kontrakty': 8,
-        'premia od kontraktu': 500}
-]
-
-TPL= "{} | {}"
-
-def wypisz_pracownika(pracownicy):
-    print(TPL.format(pracownik['imie'], pracownik['zespol']))
-
-def wypisz_pensje_backend(pracownik):
-    print(pracownik['pensja podstawowa'])
-
-def wypisz_pensje_devops(pracownik):
-    pensja = pracownik['pensja podstawowa'] * pracownik['uptime']
-    print("Pensja:", pensja)
-
-def wypisz_pensje_sprzedaz(pracownik):
-    pensja = pracownik['pensja podstawowa'] + pracownik['podpisane kontrakty'] * pracownik['premia od kontraktu']
-    print('Pensja :', pensja)
-
-
-for pracownik in pracownicy:
-    wypisz_pracownika(pracownik)
-    if pracownik['zespol'] == 'Backend':
-        wypisz_pensje_backend(pracownik)
-    if pracownik['zespol'] == 'devOps':
-        wypisz_pensje_devops(pracownik)
-    if pracownik['zespol'] == 'sprzedaz':
-        wypisz_pensje_sprzedaz(pracownik)
+#
+# pracownicy = [
+#     {
+#         'imie': 'damian',
+#         'zespol': 'Backend',
+#         'pensja podstawowa': '16000'
+#      },
+#     {
+#         'imie': 'staszek',
+#         'zespol': 'devOps',
+#         'pensja podstawowa': '20000',
+#         'uptime': 0.99
+#      },
+#     {
+#         'imie': 'lukasz',
+#         'zespol': 'sprzedaz',
+#         'pensja podstawowa': '8000',
+#         'podpisane kontrakty': 8,
+#         'premia od kontraktu': 500}
+# ]
+#
+# TPL= "{} | {}"
+#
+# def wypisz_pracownika(pracownicy):
+#     print(TPL.format(pracownik['imie'], pracownik['zespol']))
+#
+# def wypisz_pensje_backend(pracownik):
+#     print(pracownik['pensja podstawowa'])
+#
+# def wypisz_pensje_devops(pracownik):
+#     pensja = pracownik['pensja podstawowa'] * pracownik['uptime']
+#     print("Pensja:", pensja)
+#
+# def wypisz_pensje_sprzedaz(pracownik):
+#     pensja = pracownik['pensja podstawowa'] + pracownik['podpisane kontrakty'] * pracownik['premia od kontraktu']
+#     print('Pensja :', pensja)
+#
+#
+# for pracownik in pracownicy:
+#     wypisz_pracownika(pracownik)
+#     if pracownik['zespol'] == 'Backend':
+#         wypisz_pensje_backend(pracownik)
+#     if pracownik['zespol'] == 'devOps':
+#         wypisz_pensje_devops(pracownik)
+#     if pracownik['zespol'] == 'sprzedaz':
+#         wypisz_pensje_sprzedaz(pracownik)
