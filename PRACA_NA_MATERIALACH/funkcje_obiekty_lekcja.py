@@ -1,38 +1,40 @@
-#
-# LICZBA_GWIAZDEK = 20
-#
-#
-# def separator(liczba_gwiazdek = LICZBA_GWIAZDEK ):
-#     print('-' * liczba_gwiazdek + "FIRMA RURKA" + '-' * liczba_gwiazdek)
-#
-#
-# def p_kwadrat_ulubionej_liczby(liczba):
-#     separator()
-#     print('kwadrat twojej liczby to:, {}! '.format(liczba))
-#     separator()
-#
-# def kwadrat_liczby(liczba):
-#     a = liczba * liczba
-#     return a
-#
-# def print_ulubiona_liczba(ulubiona_liczba):
-#     separator()
-#     print('Twoja ulubiona liczba to:, {}! '.format(ulubiona_liczba))
-#     separator()
-#
-# def print_hello(imie, nazwisko, obywatelstwo=None, kraj_urodzenia=None):
-#     separator()
-#     print('Witaj, {} {}! '.format(imie, nazwisko))
-#     if obywatelstwo:
-#         print('masz {} obywatelstwo' .format(obywatelstwo))
-#     if kraj_urodzenia:
-#         print('pochodzisz z {}'.format(kraj_urodzenia))
-#     separator()
-# imie = input()
-# nazwisko = input()
-# obywatelstwo=input()
-# kraj_urodzenia=input()
-# print_hello(nazwisko = nazwisko, imie = imie, kraj_urodzenia=kraj_urodzenia )
+
+LICZBA_GWIAZDEK = 20
+
+
+def separator(liczba_gwiazdek = LICZBA_GWIAZDEK ):
+    print('-' * liczba_gwiazdek + "FIRMA RURKA" + '-' * liczba_gwiazdek)
+
+
+def p_kwadrat_ulubionej_liczby(liczba):
+    separator()
+    print('kwadrat twojej liczby to:, {}! '.format(liczba))
+    separator()
+
+def kwadrat_liczby(liczba):
+    a = liczba * liczba
+    return a
+
+def print_ulubiona_liczba(ulubiona_liczba):
+    separator()
+    print('Twoja ulubiona liczba to:, {}! '.format(ulubiona_liczba))
+    separator()
+
+def print_hello(imie, nazwisko, obywatelstwo=None, kraj_urodzenia=None):
+    separator()
+    print('Witaj, {} {}! '.format(imie, nazwisko))
+    if obywatelstwo:
+        print('masz {} obywatelstwo' .format(obywatelstwo))
+    if kraj_urodzenia:
+        print('pochodzisz z {}'.format(kraj_urodzenia))
+    separator()
+imie = input()
+nazwisko = input()
+obywatelstwo=input()
+kraj_urodzenia=input()
+ulubiona_liczba = input()
+print_hello(nazwisko = nazwisko, imie = imie, kraj_urodzenia=kraj_urodzenia )
+print_ulubiona_liczba(ulubiona_liczba = ulubiona_liczba)
 #
 #
 #
@@ -79,12 +81,12 @@
 
 
 
-
+#
 # def print_hello(imie, nazwisko):
 #     print('Witaj, {} {}! '.format(imie, nazwisko))
 #
 # print_hello(input(), input())
-
+#
 #
 # pracownicy = [
 #     {

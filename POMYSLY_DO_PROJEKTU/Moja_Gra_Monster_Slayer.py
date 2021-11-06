@@ -211,3 +211,15 @@ if bitwy == 20:
             print(GOBLIN[3])
             input('\n\n\nAby zakonczyc wcisnij enter')
             break
+
+#TODO: STWORZENIE KLAS klas , Stworzenie kilka róznych mobów i przydzielenie im parametrów
+# , stworzenie wyboru dungeona(las,jaskinia,bagna) , stworzenie ekwipunku i inwentarza bochatera ,
+# stworzenie sklepu i kowala, wstępne projekty graficzne mobów , postaci , dodatkowe outfity , Stworzenie
+# okna bitwy , menu gry , ranking , wstępny projekt zapisu stanu gry , Gra turowa ,
+#
+#
+#
+# wersja jako projekt zaliczeniowy:
+# świat google maps street vievs
+# implementacja emulatora fake gps , resp mobów do 100m
+# dostępność gry w formie aplikacji webowej i gry mobilnej na system android
