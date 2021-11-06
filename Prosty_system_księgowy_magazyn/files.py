@@ -1,5 +1,5 @@
 class FileHandler:
-    def __init__(self, file_path_read , file_path_write=None):
+    def __init__(self, file_path_read, file_path_write=None):
         self.history = []
         self.file_path_read = file_path_read
         if file_path_write:
@@ -25,11 +25,9 @@ class FileHandler:
                     command.extend([product_name, product_price, product_value])
                 self.history.append(command)
 
-    def write_history(self):
+    def write_history(self, history):
         with open(self.file_path_write, 'w') as file:
-            for command in self.history:
+            for command in history:
                 for element in command:
                     file.write(str(element) + '\n')
             file.write('stop\n')
-
-
