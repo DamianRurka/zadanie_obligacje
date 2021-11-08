@@ -13,3 +13,4 @@ pytest==6.2.5
 requests==2.26.0
 toml==0.10.2
 urllib3==1.26.7
+#TODO:nie dodawaj tu pygame , po ruszeniu projektu zaliczeniowego przenieś się na osoby projekt
