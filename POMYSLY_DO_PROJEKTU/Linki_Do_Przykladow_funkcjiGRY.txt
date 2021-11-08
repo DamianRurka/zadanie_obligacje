@@ -1,3 +1,5 @@
 Pole walki: https://github.com/russs123/Battle/blob/main/battle_tut8.py
 
 api świata google maps : https://www.youtube.com/watch?v=QC51FEF0JeY
+
+#poszukiwanie pomysłów do zaimplementowania
