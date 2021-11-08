@@ -160,7 +160,7 @@ slownik = {
 # with open('pets.json', 'r') as file:
 #     odczyt=json.load(file)
 # print(odczyt)
-#TODO: PICKLE
+#xTODO: PICKLE
 #TODO: PIKLOWANIE PLIKÓW I ODCZYTYWANIE ZAPLIKOWANYCH (ZAKODOWANYCH) PLIKÓW plik pets.pkl
 
 # import pickle
