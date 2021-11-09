@@ -1,32 +1,47 @@
 import requests
 import sys
 import datetime
-przykladowa_data_w_slowniku = '2021-11-13'
+import json
+
 link = "https://weatherapi-com.p.rapidapi.com/current.json"
 today = datetime.date.today()
-# jak porównać czy wpisana data jest taka sama jak daty znajdujace się w plik.txt
+#rzykladowa_data_w_slowniku = '2021-11-13'
+#Sprawdzenie czy klucz data jest taki sam w plik.json
+#if str(today) == przykladowa_data_w_slowniku:
+#    print("True")
+
+
 class POGODA:
     def __init__(self,Klucz,data=str(today)):
         self.Klucz = Klucz
+
         self.data = data
         self.zapiszdane = self.zapisz_dane_dict
         self.slownikdane = self.slownik_danych
+        print(self.Klucz)
+        self.headers = {
+            'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
+            'x-rapidapi-key': Klucz
+        }
 
 
 
     def zapisz_dane_dict(self):
-        wyslane = {'key': self.Klucz, "q": "Malbork,uk", "lat": "0", "lon": "0",
+        wyslane = {"q": "Malbork,uk", "lat": "0", "lon": "0",
                    "callback": "test", "id": "2172797",
                    "lang": "null", "units": "imperial", "mode": "xml"}
-        pobrane = requests.get(link, params=wyslane)
+        pobrane = requests.get(link, params=wyslane, headers=self.headers)
         self.req = pobrane.json()
         return self.req
 
+    # czytanie pliku
+    # def slownik_danych_read(self):  # read
+    #     with open('zapis_pogody.json', 'r') as plik1:
+    #         json.load(plik1)
+
     def slownik_danych(self): #dopisywanie a nie nadpisywanie danych w plik.txt
-        with open('zapis_pogody.txt', 'a') as plik:
-            plik.write(self.req.text)
-            dict(plik)
-            return self.zapisz_dane_dict
+        with open('zapis_pogody.json', 'w') as plik:
+            json.dump(self.req,plik)
 
 
     def status_opadow(self):
@@ -44,8 +59,8 @@ class POGODA:
 
 wejscie= POGODA(Klucz = sys.argv[1], data = sys.argv[2])
 # print(wejscie.text)
-# print(wejscie.slownik_danych())
+#print(wejscie.slownik_danych())
 # print(wejscie.json)
-# print(wejscie.zapisz_dane_dict())
-print(wejscie)
+print(wejscie.zapisz_dane_dict())
+#print(wejscie)
 # #python weather.py API KEY 2021-11-11
