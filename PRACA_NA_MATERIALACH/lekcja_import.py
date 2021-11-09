@@ -65,7 +65,7 @@
 # zimno = ('brrrrrrrrrrrrrrr')
 # cieplo = ('auuuuuuuuuuuu')
 #
-# plik = open('wyjscie.txt', 'w')    #TODO: <- TEN KOD TWORZY PLIK wyjscie.txt
+# plik = open('test.txt', 'w')    #TODO: <- TEN KOD TWORZY PLIK wyjscie.txt
 #
 # plik.write(kwadrat + '\n')
 # plik.write(kolo + '\n')

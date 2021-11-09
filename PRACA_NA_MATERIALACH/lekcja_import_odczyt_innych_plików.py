@@ -23,7 +23,7 @@ from lekcja_import import *
 # with open(filepath) as fd:
 # 	for line in fd:
 # 	print(line)
-# print("Plik jest już zamknięty")
+# print("tego dnia <data> <rodzaj tekstu zalezny od pogody>")
 
 # Czytanie z pliku:
 #
