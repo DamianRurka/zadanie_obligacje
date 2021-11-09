@@ -31,7 +31,6 @@ class POGODA:
 
     def status_opadow(self):
         opady = "precip_mm" #<-key
-        opady = pass
 
         #jesli data byla juz wpisana sprawdz w slowniku dict(plik) czy opady sa równe czy wieksze od 0
         #if opady == 0 print('nie pada)
@@ -46,8 +45,7 @@ class POGODA:
 wejscie= POGODA(Klucz = sys.argv[1], data = sys.argv[2])
 # print(wejscie.text)
 # print(wejscie.slownik_danych())
-#print(wejscie.json)
-print(wejscie)
+# print(wejscie.json)
 # print(wejscie.zapisz_dane_dict())
-
+print(wejscie)
 # #python weather.py API KEY 2021-11-11
