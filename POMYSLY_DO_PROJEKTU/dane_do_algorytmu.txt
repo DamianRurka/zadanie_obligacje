@@ -78,3 +78,9 @@ Zakodowane Pliki .pkl pickle ładowane do class
 - class osobne pole bitwy do walki z mobem z teksturami i animacjami
 - class animacje pokonanych mobów ładowane do odpowiednich mobów,
 -class animacje buffów
+- class partner(zwierzak)(drzewko rozwoju,animacja,grafika,tryb rozwoju/ewolucji/-drzewko ewolucji dla kazdej klasy inny partner(po2 na klasę)
+
+
+
+Interfejs gui/pygame/api
+strona 290 prosty interfejs->
