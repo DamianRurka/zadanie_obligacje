@@ -62,4 +62,6 @@ wejscie= POGODA(Klucz = sys.argv[1], data = sys.argv[2])
 print(wejscie.wyslij_dane_pobierajace())
 
 
-# #python weather.py API KEY 2021-11-11
+#python weather.py API KEY 2021-11-11
+
+#terminal:python weather.py "aeb21c175emsh53abf9d14a8c350p1fa3fejsn3b832d50a076" 2021-11-10
