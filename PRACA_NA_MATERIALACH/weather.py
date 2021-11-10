@@ -32,7 +32,7 @@ class POGODA:
     def czytanie_slownika(self):
         with open('zapis_pogody.json', 'r') as plik1:
             print(json.load(plik1))
-            if str(today) == ['localtime'] in json.load(plik1):
+            if self.data == ['localtime'] in json.load(plik1):
                 self.status_opadow()
             else:
                 self.zapis_slownika()
