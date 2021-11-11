@@ -29,6 +29,7 @@ class POGODA:
             self.opady = 'będzie padać'
 
 
+
         self.data_z_api = self.req['location']['localtime'].split(' ')[0]
         self.pustyslownik()
         self.sprawdzanie_daty_w_slowniku()
