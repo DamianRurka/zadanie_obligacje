@@ -23,6 +23,12 @@ class POGODA:
         pobrane = requests.get(link, params=wyslane, headers=self.headers)
         self.req = pobrane.json()
         self.opady = self.req['current']['precip_mm']
+        if self.opady == 0.0:
+            self.opady = 'Nie będzie padać'
+        else:
+            self.opady = 'będzie padać'
+
+
         self.data_z_api = self.req['location']['localtime'].split(' ')[0]
         self.pustyslownik()
         self.sprawdzanie_daty_w_slowniku()
