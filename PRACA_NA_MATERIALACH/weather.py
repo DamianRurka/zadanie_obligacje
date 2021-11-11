@@ -15,12 +15,13 @@ class POGODA:
     def __init__(self,Klucz,data=str(today)):
         self.Klucz = Klucz
         self.data = data
-        self.wyslijdane = self.wyslij_dane_pobierajace
-        self.czytaj = self.czytanie_slownika()
         self.headers = {
             'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
             'x-rapidapi-key': Klucz
         }
+        self.wyslijdane = self.wyslij_dane_pobierajace()
+        self.czytaj = self.czytanie_slownika()
+
 
     def wyslij_dane_pobierajace(self):
         wyslane = {"q": "Malbork,uk", "lat": "0", "lon": "0",
@@ -31,10 +32,10 @@ class POGODA:
         self.czytanie_slownika()
     def czytanie_slownika(self):
         with open('zapis_pogody.json', 'r') as plik1:
-            print(json.load(plik1))
-            if self.data == ['localtime'] in json.load(plik1):
+            dane_pogodowe = json.load(plik1)
+            if self.data == dane_pogodowe.keys():
                 self.status_opadow()
-            else:
+            else:#3aa
                 self.zapis_slownika()
                 self.status_opadow()
             #wczytaj plik i wyszukaj localtime jesli jest odczytaj pogodę
@@ -42,14 +43,13 @@ class POGODA:
             # ponownie sprawdz status opadów
 
     def zapis_slownika(self):
-        with open('zapis_pogody.json', 'a') as plik:
+        with open('zapis_pogody.json', 'w') as plik:
             json.dump(self.req,plik)
 
     def status_opadow(self):
         with open('zapis_pogody.json', 'r') as plik1:
-            opady = json.load(plik1)
-            for idx in opady.json()['current']:
-                mm = idx[ 'precip_mm']
+            if str(self.data) in plik1.keys():
+
                 if mm == 0.0:
                     print('Nie bedzie padac')
                 elif mm > 0.0:
