@@ -2,12 +2,13 @@ import requests
 import sys
 import datetime
 import json
-import pprint
+
 link = "https://weatherapi-com.p.rapidapi.com/current.json"
 today = datetime.date.today()
 
+
 class POGODA:
-    def __init__(self,Klucz,data=str(today)):
+    def __init__(self, Klucz, data=str(today)):
         self.Klucz = Klucz
         self.data = data
         self.headers = {
