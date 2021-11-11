@@ -28,21 +28,22 @@ class POGODA:
         self.sprawdzanie_daty_w_slowniku()
 
     def pustyslownik(self):
-        self.slownik_data_opady = {}
+        self.slownik_data_opady = []
 
     def sprawdzanie_daty_w_slowniku(self):
-        if self.data in self.slownik_data_opady[self.data_z_api] and self.data == self.slownik_data_opady[self.data_z_api]:
-            self.odczyt_pogody_format()
-            self.zapis_slownika_w_pliku()
-            self.status_opadow()
-        else:
-            self.dodawanie_do_slownika()
-            self.odczyt_pogody_format()
-            self.zapis_slownika_w_pliku()
-            self.status_opadow()
+        for daty in self.slownik_data_opady:
+            if self.data in self.slownik_data_opady:
+                self.odczyt_pogody_format()
+                self.zapis_slownika_w_pliku()
+                self.status_opadow()
+            else:
+                self.dodawanie_do_slownika()
+                self.odczyt_pogody_format()
+                self.zapis_slownika_w_pliku()
+                self.status_opadow()
 
     def dodawanie_do_slownika(self):
-        self.slownik_data_opady = {self.data_z_api: self.opady}
+        self.slownik_data_opady[self.data_z_api] = self.opady
 
 
     def zapis_slownika_w_pliku(self):
@@ -50,15 +51,15 @@ class POGODA:
             json.dump(self.slownik_data_opady, plik)
 
     def odczyt_pogody_format(self):
-        self.format = {self.data1 : self.status_opadow()}
+        self.format = {self.data_z_api : self.status_opadow()}
         with open('odczyt_pogody.json', 'w') as plik:
             json.dump(self.format, plik)
         with open('odczyt_pogody.json', 'r') as plik:
             print(json.load(plik))
 
     def status_opadow(self):
-        with open('zapis_pogody.json', 'r') as plik1:
-            json.load(plik1)
+        with open('zapis_pogody.json', 'r') as plik:
+            json.load(plik)
 
             if self.slownik_data_opady['<co tu wpisac>'] == 0.0:
                 print('Nie bedzie padac')
