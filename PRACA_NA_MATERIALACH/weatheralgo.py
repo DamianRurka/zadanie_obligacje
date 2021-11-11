@@ -74,7 +74,8 @@ class POGODA:
     # wartość jako wynik funkcji status opadów i odnosił się do funkcji zapis slownika w pliku
     # obecna funkcja zapis slownika do pliku bedzie musiala byc edytowana pod nazwe nowego slownika
     # dodaj funkcje która wyswietli dane z pliku gdy podana data sys.argv w terminalu będzie znajdowała się
-    # w słowniku, wypisz nie wiem jesli podana data z przeszlosci w sys argv nie znajdowala się w pliku.json
+    # w słowniku, wypisz nie wiem jesli podana data z przeszlosci w sys argv nie znajdowala się w pliku.json lub
+    # data jest z przyszłości
 
 
 
@@ -83,4 +84,4 @@ print(wejscie.wyslij_dane_pobierajace())
 
 #terminal: python weatheralgo.py "aeb21c175emsh53abf9d14a8c350p1fa3fejsn3b832d50a076" 2021-11-10
 
-#Jak debuggować kod i analizować działanie programu krok po kroku?
+
