@@ -92,7 +92,8 @@ if monster_kills == 1000
 passivechance +=1
 if passive == 100
 changespell == 100
-
+dostepność artefaktów z takimi passive skill od +100lv bohatera
+max lv 200
 
 Interfejs gui/pygame/api
 strona 290 prosty interfejs->

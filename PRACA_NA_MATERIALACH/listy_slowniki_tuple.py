@@ -171,7 +171,7 @@ print(mixed_tuple [0])
 # print("d" not in sample_set)
 
 #Wartości są unikalne, to znaczy wielokrotne dodanie tej samej wartości nie zwiększa rozmiaru zbioru:
-
+#
 # sample_set = {"a", "b", "c"}
 # sample_list = ["a", "b", "c"]
 # print("set:{} list: {}".format(len(sample_set), len(sample_list)))

@@ -66,3 +66,4 @@ print(wejscie.wyslij_dane_pobierajace())
 #terminal: python weatheralgo.py "aeb21c175emsh53abf9d14a8c350p1fa3fejsn3b832d50a076" 2021-11-12
 
 
+

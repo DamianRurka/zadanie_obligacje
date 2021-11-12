@@ -1,6 +1,6 @@
 import sys
 from files import FileHandler
-from Prosty_system_księgowy_magazyn.main import Magazyn
+from ZADANIA.Prosty_system_księgowy_magazyn.main import Magazyn
 
 file_path_output = "out.txt"
 
