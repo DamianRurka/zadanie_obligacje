@@ -30,20 +30,17 @@ class POGODA:
         self.wczytanie_slownika_z_pliku()
 
     def pustyslownik(self):
-        self.slownik_data_opady = []
+        self.slownik_data_opady = {}
 
     def sprawdzanie_daty_w_slowniku(self):          #  <-----  TU PROGRAM SIE BUGUJE
-        for daty in self.slownik_data_opady:
-            klucze = daty
-            if self.data in klucze:
-                print(self.slownik_data_opady)
-
-            elif self.data == str(today):
-                self.dodawanie_do_slownika()
-                self.zapis_slownika_w_pliku()
-                self.wczytanie_slownika_z_pliku()
-            else:
-                print('nie wiem')
+        if self.data in self.slownik_data_opady.keys():
+            print(self.slownik_data_opady[self.data])
+        elif self.data == str(today):
+            self.dodawanie_do_slownika()
+            self.zapis_slownika_w_pliku()
+            self.wczytanie_slownika_z_pliku()
+        else:
+            print('nie wiem')
 
     def wczytanie_slownika_z_pliku(self):
         with open('zapis_pogody.json', 'r') as plik:
@@ -66,6 +63,6 @@ class POGODA:
 wejscie = POGODA(Klucz = sys.argv[1], data = sys.argv[2])
 print(wejscie.wyslij_dane_pobierajace())
 
-#terminal: python weatheralgo.py "aeb21c175emsh53abf9d14a8c350p1fa3fejsn3b832d50a076" 2021-11-10
+#terminal: python weatheralgo.py "aeb21c175emsh53abf9d14a8c350p1fa3fejsn3b832d50a076" 2021-11-12
 
 
