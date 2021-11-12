@@ -97,3 +97,17 @@ max lv 200
 
 Interfejs gui/pygame/api
 strona 290 prosty interfejs->
+
+moc bohatera (suma kilku parametrów mnozona przez lv) pozwala na tworzenie broni z energii
+(w tym czasie slot w którym jest broń musi być pusty) dostępność dla klasy demon
+(moc jest zalezna od doświadczenia bohatera w walce-parametr stoczone walki i ...
+określone ilości dają inne eq utworzone z energii
+wartości przykładowe :
+0-999 zwiekszenie sily
+1000-4999 sierp grafika i animacja
+5000-19999 tasak grafika i animacja
+20000-35000 miecz grafika i animacja
+35001-70000 -"- -"-
+...
++100000 kosa grafika i animacja!
+
