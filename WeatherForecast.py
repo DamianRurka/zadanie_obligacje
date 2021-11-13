@@ -46,6 +46,11 @@ class WeatherForecast:
         with open('zapis_pogody.json', 'r') as plik:
             self.slownik_data_opady = json.load(plik)
             self.sprawdzanie_daty_w_slowniku()
+    # def __getitem__(self, item):
+    #
+    # def __int__(self):
+    #
+    # def __str__(self):
 
     def format_opadow(self):
         if self.opady == 0.0:
