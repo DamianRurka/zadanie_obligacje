@@ -91,3 +91,4 @@ def __iter__(self):
    return iter([0, 1, 2, 3, 4 ,5])
 for elem in obj:
    print(elem)
+
