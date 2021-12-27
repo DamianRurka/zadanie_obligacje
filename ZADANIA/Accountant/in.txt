@@ -1,0 +1,19 @@
+saldo
+1000000
+wpłata początkowa
+saldo
+-140000
+zus
+zakup
+raspberry
+15000
+5
+zakup
+nvidia_geforce
+4000
+10
+sprzedaz
+nvidia_geforce
+8000
+5
+stop

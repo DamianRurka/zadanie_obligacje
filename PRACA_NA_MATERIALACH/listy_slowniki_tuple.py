@@ -118,12 +118,12 @@
 
 
 # Metoda .index, jak i operatory "in", "not in" również są dostępne.
-
-mixed_tuple = "a", 1, "b", 2, True
-print(mixed_tuple.index("b"))
-print("a" in mixed_tuple)#wynikiem tego "printa" będzie true bo a jest w liście
-# ( jeśli chcemy wydrukować "a" to musimy podać numer elementu w liście czyli 0
-print(mixed_tuple [0])
+#
+# mixed_tuple = "a", 1, "b", 2, True
+# print(mixed_tuple.index("b"))
+# print("a" in mixed_tuple)#wynikiem tego "printa" będzie true bo a jest w liście
+# # ( jeśli chcemy wydrukować "a" to musimy podać numer elementu w liście czyli 0
+# print(mixed_tuple [0])
 
 # Tuple mogą być przekształcane w listy, a listy w tuple.
  # TODO: zmiana tupla na liste i na odwrót
@@ -184,8 +184,9 @@ print(mixed_tuple [0])
 # # set:3 list: 4
 
 
-# sample_dict = "a": 1, "b": 2, "c"
-# for k, v in sample_dict.items():
-#   print("{}: {}".format(k, v)                  TODO:tu też coś nie działa
+sample_dict = {"ala": 123, "asb": 882, "css":663}
+for k, v in sample_dict.items():
+  print("{}: {}".format(k, v))
+  # TODO:tu też coś nie działa
 
 #

@@ -8,10 +8,10 @@ zmiany = sys.argv[3:]
 
 def obsluga_CSV():
     #python reader.py "PROGRAM_DO_CSV/KATALOG_WEWNETRZNY/lead_shot.csv" "PROGRAM_DO_CSV/NOWY_KATALOG" "1,1,5" "2,2,4"
-    if not os.path.isdir(dst):
-        print(f'błąd podanej ścieżki {dst} lub podany katalog nie istnieje ')
-        os.mkdir(dst)
-        print('katalog został utworzony')
+    # if not os.path.isdir(dst):
+    #     print(f'błąd podanej ścieżki {dst} lub podany katalog nie istnieje ')
+    #     os.mkdir(dst)
+    #     print('katalog został utworzony')
 
     wyzszy_katalog, nazwa_pliku = os.path.split(src)
     if not os.path.isfile(src):

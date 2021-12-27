@@ -135,7 +135,7 @@
 
 #TODO:JSON
 
-#import json
+import json
 
 slownik = {
     'pies':{
@@ -148,11 +148,11 @@ slownik = {
     'ostatnie badanie' : [2021, 10, 10]
     }
 }
-# print(slownik)
-# zakodowany = json.dumps(slownik)
-# odkodowany = json.loads(zakodowany)
+print(slownik)
+zakodowany = json.dumps(slownik)
+odkodowany = json.loads(zakodowany)
 # print(zakodowany)
-# print(odkodowany)
+print(odkodowany)
 #TODO:zapisanie i odczytanie json'a
 # with open('pets.json', 'w') as file:
 #     json.dump(slownik, file)
