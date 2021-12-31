@@ -1,0 +1,40 @@
+saldo
+1000000.0
+wpłata początkowa
+saldo
+-140000.0
+zus
+zakup
+raspberry
+15000.0
+5.0
+zakup
+nvidia_geforce
+4000.0
+10.0
+sprzedaz
+nvidia_geforce
+8000.0
+5.0
+zakup
+powerbank
+50.0
+300.0
+sprzedaz
+powerbank
+90.0
+200.0
+sprzedaz
+powerbank
+90.0
+100.0
+saldo
+20000.0
+nagroda od dudy
+saldo
+300000.0
+oplaty
+saldo
+20000
+sprzedaz laczkow z nadwyzki towaru
+stop
