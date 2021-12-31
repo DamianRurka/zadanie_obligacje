@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Przeglad</title>
+</head>
+<body>
+    <h1>Podstrona Programu Accountant</h1>
+    <h2>Poniżej Funkcja przegladu , wyświetla dane z podanego zakresu</h2>
+    <form action="/przeglad/" method="POST">
+        <input type="text" id="stp" name="starter">
+        <input type="text" id="enp" name="ender">
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+        <p>{{ content }}</p>
+</body>
+</html>
