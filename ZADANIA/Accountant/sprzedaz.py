@@ -1,41 +1,11 @@
 import sys
-from action import Account
-from action import Manager
+from MANAGER import manager
 
-manager = Manager()
-ac = Account()
 
-@manager.assign("error")
-def get_error(take_error):
-    manager.error = take_error
+file_path = sys.argv[1]
+identyfikator = (sys.argv[2])
+cena_sztuki = (sys.argv[3])
+liczba_sztuk = (sys.argv[4])
 
-@manager.assign('show_error')
-def show_err():
-    if manager.error:
-        print(manager.error)
-
-while True:
-    try:
-        ac.get_file_path(sys.argv[1])
-    except IndexError:
-        manager.execute_param('error', 'Brak ścieżki wejścia')
-        break
-    try:
-        ac.import_db()
-
-        @manager.assign('sprzedaz')
-        def pozycje():
-            ac.sprzedaz(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]))
-        manager.execute('sprzedaz')
-
-        @manager.assign('przeglad')
-        def przeglad(start_stop=[0, 0]):
-            ac.przeglad(start_stop[0], start_stop[1])
-        manager.execute('przeglad')
-    except FileNotFoundError:
-        manager.execute_param('error', "Nie udało się załadować pliku")
-        break
-    ac.update_db()
-    break
-
-manager.execute('show_error')
+manager.execute("sprzedaz", identyfikator, int(cena_sztuki), int(liczba_sztuk))
+manager.zapis("sprzedaz", identyfikator, cena_sztuki, liczba_sztuk)
