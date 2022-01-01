@@ -1,32 +1,9 @@
 import json
 from flask import Flask, render_template, request
+import mysql.connector
 
 app = Flask(__name__)
 
-class KONTO():
-    from MANAGER import manager
-    manager.execute("konto")
-    manager.zapis()
-
-class loaderKonto():
-    def __init__(self):
-        self.path = 'saldo.json'
-        self.db_content = {}
-
-    def read_db(self):
-        with open(self.path, 'r') as f:
-            self.db_content = json.load(f)
-        return self.db_content
-
-class Magazyn:
-    def __init__(self):
-        self.path = 'magazyn.txt'
-        self.db_content = {}
-
-    def read_db(self):
-        with open(self.path, 'r') as f:
-            self.db_content = f.read()
-        return self.db_content
 
 class przeglad:
     def __init__(self):
@@ -48,29 +25,40 @@ def index():
 
 @app.route('/konto/')
 def konto():
-    KONTO()
-    db =  loaderKonto()
-    content = db.read_db()
-    Saldok = content[0:]
-    return render_template('konto.html',Saldok = Saldok)
+    connection = mysql.connector.connect(user='root', password='Wikingowie123x',
+                                         host='127.0.0.1', database='accountant',
+                                         auth_plugin='mysql_native_password')
 
-@app.route('/magazyn/',methods=['GET','POST'])
+    cursorPS = connection.cursor(buffered=True)
+    datacheck = "SELECT saldo FROM stankonta WHERE idnew_table = 1"
+    cursorPS.execute(datacheck)
+    for row in cursorPS:
+        Saldok = row
+        return render_template('konto.html',Saldok = Saldok)
+    connection.close()
+
+@app.route('/magazyn/')
 def magazyn():
-    if request.method == "POST":
-        raz = request.form["pierwszy"]
-        dwa = request.form["drugi"]
-        trzy = request.form["trzeci"]
-        cztery = request.form["czwarty"]
-        piec = request.form["piąty"]
-        from MANAGER import manager
 
-        identyfikator = (raz,dwa,trzy,cztery,piec)  # np.:  magazyn.py "in.txt" "nvidia_geforce" "lenovo" "raspberry"
-        manager.execute("magazyn", identyfikator)
-        title = 'Przedmioty:'
-        db = Magazyn()
-        content = db.read_db()
-        return render_template('magazyn.html',title=title,content=content)
-    return render_template('magazyn.html',title='xxx')
+
+    connection = mysql.connector.connect(user='root', password='Wikingowie123x',
+                                         host='127.0.0.1', database='accountant',
+                                         auth_plugin='mysql_native_password')
+
+    cursor = connection.cursor(buffered=True)
+
+    datacheck = "SELECT nazwaproduktu,liczbasztuk FROM magazyndata "
+    cursor.execute(datacheck)
+    numrows = cursor.rowcount
+
+
+    for rows in cursor.fetchall():
+        content = rows
+        print(content)
+
+        return render_template('magazyn.html',content=content)
+    connection.close()
+
 
 
 @app.route('/przeglad/',methods=['GET','POST'])
